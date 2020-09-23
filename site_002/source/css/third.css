@@ -1,0 +1,32 @@
+/* This is the css for the third solution */
+body {
+  width: 998px;
+  margin: 0 auto;
+}
+
+.title {
+  border: 3px solid cadetblue;
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.content {
+  position: absolute;
+  border: 1px solid red;
+}
+
+.box {
+  width: 283px;
+  height: 1940px;
+  border: 3px solid cadetblue;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 15px;
+  float: left;
+}
+
+.first {
+  margin-left: 0;
+}

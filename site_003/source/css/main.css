@@ -1,0 +1,42 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  background: #fafafa;
+  font-family: "Roboto";
+}
+
+.content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.menu {
+  border: 1px solid #3d3d3d;
+  width: 200px;
+  height: 130px;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+.text {
+  border: 1px solid #3d3d3d;
+  width: 510px;
+  padding: 20px;
+  margin-left: 50px;
+  border-radius: 4px;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #3d3d3d;
+}
+
+.menu ul li a:active {
+  text-decoration: none;
+  color: #625858;
+}

@@ -1,0 +1,29 @@
+body {
+  width: 998px;
+  margin: 20px auto;
+  background-color: #f2f2f2;
+}
+
+.title {
+  border: 3px solid #1f80a6;
+  padding: 15px;
+  text-align: center;
+  color: #1f80a6;
+}
+
+.content {
+  display: flex;
+}
+
+.box {
+  width: 283px;
+  border: 3px solid #2685bf;
+  margin-top: 20px;
+  padding: 15px;
+  color: white;
+  background: #1f80a6;
+}
+
+.secondary-box {
+  margin-left: 20px;
+}
