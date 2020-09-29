@@ -12,7 +12,7 @@ body {
 }
 
 .menu {
-  border: 1px solid #3d3d3d;
+  border: 2px solid #3671bf;
   width: 200px;
   height: 130px;
   color: #3d3d3d;
@@ -20,11 +20,15 @@ body {
 }
 
 .text {
-  border: 1px solid #3d3d3d;
+  border: 2px solid #3671bf;
   width: 510px;
   padding: 20px;
   margin-left: 50px;
   border-radius: 4px;
+}
+
+.text h2 {
+  color: #3671bf;
 }
 
 .menu ul {
@@ -39,4 +43,10 @@ body {
 .menu ul li a:active {
   text-decoration: none;
   color: #625858;
+}
+
+.menu ul li a:hover {
+  text-decoration: none;
+  color: #3671bf;
+  transition: color 0.5s;
 }
