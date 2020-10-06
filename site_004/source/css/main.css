@@ -1,0 +1,111 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  background: #fafafa;
+  font-family: "Roboto";
+}
+
+.content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.menu {
+  border: 2px solid #3671bf;
+  width: 200px;
+  height: 130px;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+.text {
+  border: 2px solid #3671bf;
+  width: 510px;
+  padding: 20px;
+  margin-left: 50px;
+  border-radius: 4px;
+}
+
+.text h2 {
+  color: #3671bf;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #3d3d3d;
+}
+
+.menu ul li a:active {
+  text-decoration: none;
+  color: #625858;
+}
+
+.menu ul li a:hover {
+  text-decoration: none;
+  color: #3671bf;
+  transition: color 0.5s;
+}
+
+.login-form {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 10px;
+  border: 2px solid #3671bf;
+  width: 200px;
+  height: 200px;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+.txtUsername,
+.txtPassword {
+  position: absolute;
+  width: 170px;
+  height: 30px;
+  font-size: 14px;
+  border: 2px solid #3671bf;
+  border-radius: 4px;
+  margin-left: 10px;
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+.txtPassword {
+  top: 60px;
+}
+
+.btnLogin {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  background-color: #3671bf;
+  color: #fff;
+  border: 2px solid #3671bf;
+  border-radius: 4px;
+  margin-left: 25%;
+  top: 110px;
+}
+
+.links {
+  position: absolute;
+  top: 150px;
+  margin-left: 8px;
+}
+
+.link-criar,
+.link-password {
+  font-size: 12px;
+  text-decoration: none;
+  color: #3d3d3d;
+}
+
+.link-criar:hover,
+.link-password:hover {
+  color: #3671bf;
+  transition: color 0.2s;
+}

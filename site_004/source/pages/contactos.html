@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site 004</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/contactos.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="banner">
+      <img
+        src="../images/contactos.jpg"
+        alt="Image of a man talking on the phone"
+      />
+    </div>
+
+    <div class="content">
+      <div class="left-content">
+        <div class="menu">
+          <ul>
+            <li><a href="../../index.html">Homepage</a></li>
+            <li><a href="quem_somos.html">Quem somos</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="escola.html">Escola</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+          </ul>
+        </div>
+        <div class="login-form">
+          <form name="login" method="POST" action="./source/php/form_login_handler.php">
+            <input type="text" class="txtUsername" name="username" id="username" placeholder="Username" />
+            <input type="password" class="txtPassword" name="password" id="password" placeholder="Password" /><br />
+            <input type="submit" class="btnLogin" name="btnLogin" id="btnLogin" value="Login" /><br />
+            <div class="links">
+              <a class="link-password" href="#">Esqueci-me da password</a><br />
+                <a class="link-criar" href="#">Criar uma conta</a>
+            </div>
+          </form>
+        </div>
+      <div class="text">
+        <h2>Contactos</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          possimus fugiat in, modi laborum esse. Fugit sit corporis a minus quia
+          fugiat exercitationem voluptatem corrupti iusto, ullam sequi natus
+          quos expedita repellendus accusantium nisi est! Neque optio,
+          molestias, aliquam fuga autem consequatur ullam quasi consequuntur
+          alias aut eveniet vero hic!
+        </p>
+        <p>
+          Consequuntur, distinctio molestiae. Accusantium cumque nisi totam
+          corrupti voluptatem dolores beatae cupiditate maiores inventore enim
+          quis illum earum recusandae ad, incidunt voluptate quod. Dolores,
+          eaque! Quidem animi iure harum, ab qui dolore veritatis autem tenetur
+          esse, perspiciatis facilis quae necessitatibus unde numquam quo
+          repellat error incidunt, fuga officiis laboriosam! Odio?
+        </p>
+        <p>
+          Eaque, ut molestias quae officia in quibusdam nostrum maiores,
+          recusandae assumenda sint soluta non quia beatae aspernatur impedit id
+          eius nisi aliquid exercitationem perferendis nesciunt ducimus incidunt
+          repudiandae? Nulla veritatis corrupti fuga error ab fugiat praesentium
+          id quae nobis. Non nostrum, libero sequi vel quos architecto labore
+          consequatur dolor quidem.
+        </p>
+        <div class="form">
+          <form
+            name="contactos"
+            class="contactos"
+            method="POST"
+            action="../php/form_contacts_handler.php"
+          >
+            <input
+              type="text"
+              class="txtNome"
+              name="txtNome"
+              placeholder="Nome"
+            /><br />
+            <input
+              type="email"
+              class="txtEmail"
+              name="txtEmail"
+              placeholder="Email"
+            /><br />
+            <textarea
+              class="txtMensagem"
+              name="txtMensagem"
+              placeholder="Mensagem"
+            ></textarea
+            ><br />
+            <input
+              type="submit"
+              class="btnEnviar"
+              name="btnEnviar"
+              value="Enviar"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
