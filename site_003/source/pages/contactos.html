@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site 003</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/contactos.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
@@ -55,22 +56,39 @@
           id quae nobis. Non nostrum, libero sequi vel quos architecto labore
           consequatur dolor quidem.
         </p>
-        <p>
-          Expedita accusamus similique fuga, dicta iure fugit iste assumenda?
-          Placeat ratione ullam dignissimos nobis ipsam earum adipisci tempore
-          saepe dolore numquam odio nam temporibus, dolor cum aspernatur aliquam
-          magnam magni libero itaque quaerat recusandae nihil totam non.
-          Reprehenderit, quaerat doloremque illo, ex molestias explicabo, soluta
-          enim qui perferendis autem dolore!
-        </p>
-        <p>
-          Itaque quibusdam dolorem eos, corporis expedita et quis voluptate
-          mollitia, magnam eum distinctio quia amet maxime illum. Sit ab
-          aperiam, cupiditate incidunt earum quae porro facilis quo quibusdam
-          optio unde quisquam amet! Ad, ipsum ipsa, nesciunt accusamus iure
-          velit distinctio eaque unde porro expedita, ipsam natus culpa. Enim,
-          animi ratione.
-        </p>
+        <div class="form">
+          <form
+            name="contactos"
+            class="contactos"
+            method="POST"
+            action="../php/form_contacts_handler.php"
+          >
+            <input
+              type="text"
+              class="txtNome"
+              name="txtNome"
+              placeholder="Nome"
+            /><br />
+            <input
+              type="email"
+              class="txtEmail"
+              name="txtEmail"
+              placeholder="Email"
+            /><br />
+            <textarea
+              class="txtMensagem"
+              name="txtMensagem"
+              placeholder="Mensagem"
+            ></textarea
+            ><br />
+            <input
+              type="submit"
+              class="btnEnviar"
+              name="btnEnviar"
+              value="Enviar"
+            />
+          </form>
+        </div>
       </div>
     </div>
   </body>
