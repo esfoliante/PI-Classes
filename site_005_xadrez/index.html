@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site 005 - Chess</title>
+    <link rel="stylesheet" href="./source/css/main.css" />
+  </head>
+  <body>
+    <div id="board" class="board">
+      <img src="./source/images/rook_black.svg" />
+      <img src="./source/images/knight_black.svg" class="knight-black" />
+      <img src="./source/images/bishop_black.svg" class="bishop-black" />
+      <img src="./source/images/queen_black.svg" class="queen-black" />
+      <img src="./source/images/king_black.svg" class="king-black" />
+      <img src="./source/images/bishop_black.svg" class="bishop-black-right" />
+      <img src="./source/images/knight_black.svg" class="knight-black-right" />
+      <img src="./source/images/rook_black.svg" class="rook-black-right" />
+      <img src="./source/images/rook.svg" class="bottom" />
+      <img src="./source/images/knight.svg" class="bottom knight" />
+      <img src="./source/images/bishop.svg" class="bottom bishop" />
+      <img src="./source/images/queen.svg" class="bottom queen" />
+      <img src="./source/images/king.svg" class="bottom king" />
+      <img src="./source/images/bishop.svg" class="bottom bishop-right" />
+      <img src="./source/images/knight.svg" class="bottom knight-right" />
+      <img src="./source/images/rook.svg" class="bottom rook-right" />
+      <script>
+        function createImage(position, side) {
+          if (side == "top") {
+            var pawn = document.createElement("img");
+            pawn.setAttribute("src", "./source/images/pawn_black.svg");
+            pawn.setAttribute("style", `top: 100px; left: ${position}px;`);
+            pawn.setAttribute("alt", "Pawn");
+            document.getElementById("board").appendChild(pawn);
+          } else {
+            var pawn = document.createElement("img");
+            pawn.setAttribute("src", "./source/images/pawn.svg");
+            pawn.setAttribute("style", `bottom: 100px; left: ${position}px;`);
+            pawn.setAttribute("alt", "Pawn");
+            document.getElementById("board").appendChild(pawn);
+          }
+        }
+
+        for (i = 0; i < 8; i++) {
+          createImage(i * 100, "top");
+          createImage(i * 100, "bottom");
+        }
+      </script>
+    </div>
+  </body>
+</html>

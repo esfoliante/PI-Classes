@@ -1,0 +1,79 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #fafafa;
+}
+
+.board {
+  margin-top: 13%;
+  position: relative;
+  background: url("../images/board.png");
+  width: 800px;
+  height: 800px;
+}
+
+img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.knight-black {
+  left: 100px;
+}
+
+.bishop-black {
+  left: 200px;
+}
+
+.queen-black {
+  left: 300px;
+}
+
+.king-black {
+  left: 400px;
+}
+
+.bishop-black-right {
+  right: 200px;
+}
+
+.knight-black-right {
+  right: 100px;
+}
+
+.rook-black-right {
+  right: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.knight {
+  left: 100px;
+}
+
+.bishop {
+  left: 200px;
+}
+
+.queen {
+  left: 300px;
+}
+
+.king {
+  left: 400px;
+}
+
+.bishop-right {
+  right: 200px;
+}
+
+.knight-right {
+  right: 100px;
+}
+
+.rook-right {
+  right: 0;
+}
