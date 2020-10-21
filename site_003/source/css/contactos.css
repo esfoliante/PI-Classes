@@ -32,3 +32,13 @@
   border-radius: 4px;
   margin-top: 5px;
 }
+
+.btnReset {
+  height: 30px;
+  width: 100px;
+  background-color: #be3422;
+  color: #fff;
+  border: 2px solid #be3422;
+  border-radius: 4px;
+  margin-top: 5px;
+}

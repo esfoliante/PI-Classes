@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handler</title>
-</head>
-<body>
-    <?php
+<?php
 
-        print_r($_POST);
-        die();
+// ? We won't use this anymore but c'mon, it's our first php script
+// print_r($_POST);
+// die();
 
-    ?>
-</body>
-</html>
+// ? In case you are wondering, a+ creates the file and appends data to it
+$file = fopen("../utils/data.csv", "a+");
+$data = $_POST['name'] . ';' . $_POST['email'] . ';' . $_POST['message'] . "\n";
+
+fputs($file, $data);
+header("location: ../pages/thanks.html");
