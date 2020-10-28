@@ -11,8 +11,12 @@ function pp($array)
 
 // ? in this function we will upload the file to our folder
 // ? which the default is simply 'upload'
-function upload_image($file, $types = $supported_types, $folder = 'upload', $max_upload_size = 10000000)
+function upload_image($file, $types = null, $folder = 'upload', $max_upload_size = 10000000)
 {
+
+    global $supported_types;
+
+    if($types == null) $types = $supported_types;
 
     // ? in the next line we will be checking for errors
     if(!file['error']) {
