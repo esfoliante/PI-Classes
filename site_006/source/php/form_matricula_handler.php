@@ -18,9 +18,6 @@ function checkFile($path)
 function checkUpload($file, $arrTypes = array('image/png', 'image/jpeg', 'image/gif'), $max_upload_size = 10000000)
 {
 
-    print_r($file);
-    die();
-
     if ($file['error'] != 0) {
         header("location: ../pages/error.php?error=Error uploading file");
         die();
@@ -37,6 +34,7 @@ function checkUpload($file, $arrTypes = array('image/png', 'image/jpeg', 'image/
     }
 
     return $filename;
+
 }
 
 function writeData($file)
@@ -80,4 +78,4 @@ function writeData($file)
 $path = '../utils/data.csv';
 
 writeData(checkFile($path));
-header("location: ../pages/thanks.php?nome=" . $_POST['nome']);
+header("location: ../pages/show.php");

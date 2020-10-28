@@ -11,7 +11,7 @@ function pp($array)
 
 // ? in this function we will upload the file to our folder
 // ? which the default is simply 'upload'
-function upload_file($file, $types = $supported_types, $folder = 'upload', $max_upload_size = 10000000)
+function upload_image($file, $types = $supported_types, $folder = 'upload', $max_upload_size = 10000000)
 {
 
     // ? in the next line we will be checking for errors
@@ -24,7 +24,7 @@ function upload_file($file, $types = $supported_types, $folder = 'upload', $max_
             $file_name = format_image($file_info);
 
             // ? and, to finish of, we move the temporary file to the permanent location
-            move_uploaded_file($file['tmp_name'], $file_name);
+            move_uploaded_file($file['tmp_name'], $folder . '/' . $file_name);
 
             // ? then we simply return the filename so that we can store it in our csv
             return $file_name;
@@ -37,7 +37,7 @@ function upload_file($file, $types = $supported_types, $folder = 'upload', $max_
 
 // ? in this function we will format the file name according
 // ? to the indications the teacher gave us
-function format_image($name, $file_info) {
+function format_file($name, $file_info) {
 
     // ? this is simply the format we will be using
     $name = $file_info['filename'].'_'.uniqid().'.'.$file_info['extension'];
