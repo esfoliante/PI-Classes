@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matriculas</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./source/css/main.css" />
+  </head>
+  <body>
+    <div class="form">
+      <h2>Matrículas: ITM</h2>
+      <form
+        name="form-matricula"
+        method="POST"
+        action="./source/php/form_matricula_handler.php"
+        enctype="multipart/form-data"
+      >
+        <label class="lblNome" for="nome">Nome do aluno</label>
+        <input type="text" class="txtNome" name="nome" /><br />
+        <label class="lblEmail" for="email">E-mail do aluno</label>
+        <input type="email" class="txtEmail" name="email" /><br />
+        <label class="lblAno" for="ano">Ano de inscrição</label>
+        <select class="sltAno" name="ano">
+          <option value="">Selecione um ano</option>
+          <option value="10">10º ano</option>
+          <option value="11">11º ano</option>
+          <option value="12">12º ano</option></select
+        ><br />
+        <p class="subtitulo">Sexo do aluno</p>
+        <div class="radioButtons">
+          <label for="sexo">Masculino</label>
+          <input type="radio" name="sexo" value="masculino" />
+          <label for="sexo">Feminino</label>
+          <input type="radio" name="sexo" value="feminino" checked />
+        </div>
+
+        <p class="subtitulo">Disciplinas do aluno</p>
+        <div class="disciplinas">
+          <label for="português">Português</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="português"
+            value="português"
+          /><br />
+          <label for="linges">Lingua estrangeira</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="linges"
+            value="linges"
+          /><br />
+          <label for="filosofia">Filosofia</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="filosofia"
+            value="filosofia"
+          /><br />
+          <label for="edf">Educação física</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="edf"
+            value="edf"
+          /><br />
+          <label for="matematica">Matemática A</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="matematica"
+            value="matematica"
+          /><br />
+          <label for="fqa">Fisica e Química A</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="fqa"
+            value="fqa"
+          /><br />
+          <label for="med">Moral Ética e Deontologia</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="med"
+            value="med"
+          /><br />
+          <label for="ai">Aplicações Informáticas</label>
+          <input type="checkbox" class="checkbox" name="ai" value="ai" /><br />
+          <label for="fac">Fundamentos e Arquitetura de Computadores</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="fac"
+            value="fac"
+          /><br />
+          <label for="tp">Técnicas de Programação</label>
+          <input type="checkbox" class="checkbox" name="tp" value="tp" /><br />
+          <label for="iebd">Implementação e Exploração de Bases de Dados</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="iebd"
+            value="iebd"
+          /><br />
+          <label for="pi">Programação Internet</label>
+          <input type="checkbox" class="checkbox" name="pi" value="pi" /><br />
+          <label for="tdm">Tecnologias e Desenvolvimento Multimédia</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="tdm"
+            value="tdm"
+          /><br />
+          <label for="pt">Projeto Tecnológico</label>
+          <input type="checkbox" class="checkbox" name="pt" value="pt" /><br />
+          <label for="fct">Formação em Contexto de Trabalho</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="fct"
+            value="fct"
+          /><br />
+        </div>
+        <br />
+        <label class="subtitulo" for="observacoes">Observações</label><br />
+        <textarea class="textArea" name="observacoes"></textarea><br />
+        <input type="file" id="picture" name="picture" /><br /><br />
+        <input type="submit" class="btnEnviar" value="Enviar" />
+        <input type="reset" class="btnReset" value="Reset" />
+      </form>
+    </div>
+  </body>
+</html>

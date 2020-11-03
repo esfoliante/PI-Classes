@@ -1,0 +1,81 @@
+body {
+  margin: 0 auto;
+  width: 800px;
+  font-family: "Roboto";
+}
+
+.form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 3px solid rgb(58, 136, 238);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.txtNome,
+.txtEmail {
+  border: 2px solid #000;
+  border-radius: 4px;
+  height: 30px;
+  width: 300px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.sltAno {
+  margin-top: 20px;
+  height: 30px;
+  width: 300px;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+.radioButtons {
+  margin-top: 10px;
+}
+
+.subtitulo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.disciplinas {
+  margin-top: 20px;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  margin-top: 5px;
+  left: 360px;
+}
+
+.textArea {
+  margin-top: 20px;
+  resize: none;
+  width: 600px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.btnEnviar {
+  height: 30px;
+  width: 100px;
+  background-color: #119243;
+  color: #fff;
+  border: 2px solid #119243;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.btnReset {
+  height: 30px;
+  width: 100px;
+  background-color: #be3422;
+  color: #fff;
+  border: 2px solid #be3422;
+  border-radius: 4px;
+  margin-top: 5px;
+}
