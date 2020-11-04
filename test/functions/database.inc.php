@@ -1,94 +1,62 @@
 <?php
+
+use mysqli;
+
 /**
- *  ! Code by: Miguel Ferreira
- *  ! github: www.github.com/esfoliante 
+ * Copyright 2020 Miguel Ferreira (github.com/esfoliante)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
-// ! NOTE: To better read this code it's recommended for you to install the "BETTER COMMENTS" extension
+function db_connect($information) {
+	
+	$connection = new mysqli($information['hostname'], $information['username'], $information['password'], $information['database']);
+	
+	if ($connection->connect_error) {
 
-// ? this function will allow us to connect to the database, it being
-// ? a mysql database like MySQL or even a software like Microsoft Access
-function connect($database, $servername = "localhost", $username = "root", $password = "", $provider = "mysql") {
+		return $connection->connect_error;
+	}
 
-    if($provider == "mysql") {
+	$connection->set_charset("utf8");
 
-        // ? we will simply start the connection and insert the database parameter right away
-        $connection = new mysqli($servername, $username, $password, $database);
 
-        // ? and now, if there's any error connecting to the database we will throw an error
-        if($connection->connect_error) {
-            return "Error";
-        }
+	return $connection;
 
-    } else if($provider == "other") {
-
-        $connection = odbc_connect($database, $username, $password);
-
-        if($connection->connect_error) {
-            return "Error";
-        }
-
-    }
-
-    return $connection;
-    
 }
 
-// ? this function is maybe a bit useless but it automatically handles
-// ? verifications like if the query was successful and stuff like that
-// ? it might avoid some errors
-function query($connection, $query, $provider = "mysql") {
+function db_query($connection, $sql) {	
 
-    if($provider == "mysql") {
+    
+    $result = $connection->query($sql);
+    
+	if(is_bool($result)) {
+		if($id = $connection->insert_id)
+			return $id;
+        
+		return $result ? true : false;
+	} elseif($result) { 
 
-        $result = $connection->query($query);
-
-        // ? if the connection is successful we return result
-        if($result) {
-            return $result;
-        }
-
-        // ? if not, then we return false
-        return false;
-
-    } else if($provider == "other") {
-
-        $result = odbc_exec($connection , $query);
-
-        if($result) {
-            return $result;
-        }
-
-        return false;
-
+		$query = $result->fetch_all(MYSQLI_ASSOC);
+		return $query;
 
     }
-    
+	
+	return false;
+
 }
 
-// ? have you ever wondered about killing a connection...? ahaha just kidding... unless...
-// ? anyways, in this function we kill a specified connection
-function kill($connection, $provider = "mysql") {
+function db_close($connection) {
 
-    if($provider == "mysql") {
-
-        // ? and, if the connection is killed successfully we can simply wash our hands and leave
-        if($connection->close()) {
-            return true;
-        }
-
-        // ? however if the connection is not killed successfully we will have some problems
-        return false;
-
-    } else {
-
-        if(odbc_close($connection)) {
-            return true;
-        }
-
-        return false;
-
-    }
-    
+	return $connection->close();
 
 }
