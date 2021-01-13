@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5fecdffeb2335e33f7b7ec65cd59b61b",
+    "packages": [
+        {
+            "name": "jaypha/mysqli-ext",
+            "version": "v0.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaypha/mysqli-ext.git",
+                "reference": "a876b91a3ce05ad4f78b73e6ebf0d9f9ccc0bb0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaypha/mysqli-ext/zipball/a876b91a3ce05ad4f78b73e6ebf0d9f9ccc0bb0f",
+                "reference": "a876b91a3ce05ad4f78b73e6ebf0d9f9ccc0bb0f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.0 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaypha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSL-1.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jason den Dulk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convenience extensions to mysqli",
+            "support": {
+                "issues": "https://github.com/jaypha/mysqli-ext/issues",
+                "source": "https://github.com/jaypha/mysqli-ext/tree/v0.1.8"
+            },
+            "time": "2019-12-08T22:31:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

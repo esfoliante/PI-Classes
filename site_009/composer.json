@@ -1,0 +1,5 @@
+{
+    "require": {
+        "jaypha/mysqli-ext": "^0.1.8"
+    }
+}
